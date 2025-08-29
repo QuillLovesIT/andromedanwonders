@@ -17,7 +17,7 @@
         0,
         0
       ],
-      "description": "A species comprised of metal plates that is capable of shifting the very tectonic plates we stand on",
+      "description": "A species comprised of metal plates that is capable of shifting the very tectonic plates the earth is comrpised of",
       "icon": "alienevo:textures/gui/playlists/playlist_1/alien_190.png",
       "first_tick_commands": [
         "scale easing set palladium:ability pehkui:exponential_out",
