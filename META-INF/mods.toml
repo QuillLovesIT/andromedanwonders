@@ -1,6 +1,6 @@
 modLoader = 'lowcodefml'
 showAsResourcePack = false
-loaderVersion="[47,)"
+loaderVersion="[47]"
 license="All rights reserved"
 
 [[mods]]
