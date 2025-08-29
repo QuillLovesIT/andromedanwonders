@@ -1,0 +1,1 @@
+global.alienevo_alien_190 = ['andromedan_wonders:talpaedan']

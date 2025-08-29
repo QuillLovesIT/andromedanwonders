@@ -1,0 +1,28 @@
+modLoader = 'lowcodefml'
+showAsResourcePack = false
+loaderVersion="[47,)"
+license="All rights reserved"
+
+[[mods]]
+modId="andromedan_wonders"
+displayName="andromedan_wonders"
+version="1.0.0"
+logoFile = "logo.png"
+logoBlur = false
+description='''
+AlienEvo addon pack that adds Armodrillo, and more!
+'''
+
+[[dependencies.andromedan_wonders]]
+modId = "palladium"
+mandatory = true
+versionRange = ""
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.andromedan_wonders]]
+modId = "alienevo_pack"
+mandatory = true
+versionRange = ""
+ordering = "NONE"
+side = "BOTH"

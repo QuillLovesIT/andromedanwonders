@@ -1,0 +1,11 @@
+{
+    "schemaVersion": 1,
+    "authors": ["Quill"],
+    "environment": "*",
+    "name": "Andromedan_Wonders",
+    "id": "andromedan_wonders",
+    "version": "1.0.0",
+    "description": "AlienEvo addonpack that adds Talpaedans!",
+    "icon": "logo.png",
+    "license": "Uhh insert License ig.."
+}

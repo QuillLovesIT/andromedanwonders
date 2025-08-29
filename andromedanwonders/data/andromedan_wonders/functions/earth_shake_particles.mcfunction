@@ -1,0 +1,1 @@
+kubejs run earth_shake_particles

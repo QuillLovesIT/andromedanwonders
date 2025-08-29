@@ -1,0 +1,25 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"talpaedan.controller": {
+			"initial_state": "idle",
+			"states": {
+				"idle": {
+					"animations": ["idle"],
+					"transitions": [
+						{"burrow": ""}
+					]
+				},
+				"burrow": {
+					"animations": [
+						{"burrow": "ability_burrow"}
+					],
+					"transitions": [
+						{"idle": "animation_finished"}
+					],
+					"blend_transition": 1
+				}
+			}
+		}
+	}
+}
