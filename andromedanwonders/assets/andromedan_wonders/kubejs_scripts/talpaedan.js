@@ -38,7 +38,6 @@ PalladiumEvents.registerAnimations((event) => {
     });
 });
 
-
 ServerEvents.commandRegistry(event => {
     event.registerCommand("earth_shake_particles", ctx => {
         let server = ctx.source.server;
