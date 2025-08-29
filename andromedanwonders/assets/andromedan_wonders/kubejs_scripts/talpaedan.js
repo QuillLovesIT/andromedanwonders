@@ -38,46 +38,7 @@ PalladiumEvents.registerAnimations((event) => {
     });
 });
 
-PlayerEvents.tick(event => {
-    let player = event.player;
 
-    if (abilityUtil.hasPower(player, "andromedan_wonders:talpaedan")) {
-        if (player.isInWater()) {
-            // kill sprint so ctrl+W can't trigger swimming
-            if (player.isSprinting()) {
-                player.setSprinting(false);
-            }
-
-            // prevent swimming pose/animation
-            if (player.isSwimming()) {
-                player.setSwimming(false);
-            }
-
-            // lock pose to crouch/stand
-            if (player.isCrouching()) {
-                player.setPose("crouching");
-            } else {
-                player.setPose("standing");
-            }
-
-            // BLOCK jump in water completely (so no hovering up)
-            if (player.input.keyPressing("key.jump")) {
-                player.input.set("key.jump", false);
-            }
-
-            // heavy slow water movement
-            let input = player.input;
-            let speed = 0.05;
-
-            let dx = (input.leftImpulse - input.rightImpulse) * speed;
-            let dz = input.forwardImpulse * speed;
-
-            // apply "sink weight" if crouching, otherwise just dampen Y
-            let newY = player.isCrouching() ? -0.1 : player.deltaMovement.y * 0.5;
-            player.setDeltaMovement(dx, newY, dz);
-        }
-    }
-});
 ServerEvents.commandRegistry(event => {
     event.registerCommand("earth_shake_particles", ctx => {
         let server = ctx.source.server;

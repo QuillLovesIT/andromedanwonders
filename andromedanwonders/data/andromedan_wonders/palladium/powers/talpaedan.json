@@ -700,6 +700,19 @@
         ]
       }
     },
+    "Gravity_water": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "forge:swim_speed",
+      "amount": -30,
+      "hidden": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:in_water"
+          }
+        ]
+      }
+    },
     "base_form": {
       "type": "alienevo:omnitrix_detransform",
       "icon": "#alienevo:detransform",
