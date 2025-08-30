@@ -19,8 +19,7 @@
           "transition_tick_time": 0,
           "triggers": {
             "drill_off": "drill_mode_off",
-            "drill_on": "drill_mode_on",
-            "tectonic_shock": "tectonic.shock"
+            "drill_on": "drill_mode_on"
             
           }
         }
@@ -49,15 +48,14 @@
           }
         }
       },
-       "animation_file": "andromedan_wonders:animations/talpaedan.animation.json",
+       "animation_file": "andromedan_wonders:animations/talpaedanfp.animation.json",
       "animation_controller": [
         {
           "name": "drill_mode",
           "transition_tick_time": 0,
           "triggers": {
             "drill_off": "drill_mode_off",
-            "drill_on": "drill_mode_on",
-            "tectonic_shock": "tectonic.shock"
+            "drill_on": "drill_mode_on"
             
           }
         }

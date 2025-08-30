@@ -3,36 +3,37 @@ PalladiumEvents.registerAnimations((event) => {
         if (abilityUtil.isEnabled(builder.getPlayer(), "andromedan_wonders:talpaedan", "renderLayer")) {
             if (builder.isFirstPerson()) {
                 builder.get("right_arm")
-                    .setX(-2.4)
-                    .setZ(6)
-                    .scaleX(0.6)
-                    .scaleY(0.6)
-                    .scaleZ(0.6);
+                    .setX(1)
+                    .setZ(-1)
+                    .scaleX(0.8)
+                    .scaleY(0.8)
+                    .scaleZ(0.8);
                     builder.get("left_arm")
                     .setX(1.3)
                     .setZ(6)
-                    .scaleX(0.6)
-                    .scaleY(0.6)
-                    .scaleZ(0.6);
+                    .scaleX(0.8)
+                    .scaleY(0.8)
+                    .scaleZ(0.8);
             }
             else {
                 if (builder.getPlayer().isCrouching()) {
                     builder.get("head")
-                        .moveZ(-4)
+                        .moveZ(-2)
                         .moveY(-3.7);
                     builder.get("right_arm")
-                        .setZ(-0.8)
-                        .setY(-0.7);
+                        .setZ(-2.7)
+                        .setY(2);
                     builder.get("left_arm")
-                        .setZ(-0.8) //negative = forwards
-                        .setY(-0.7); //negative = higher placement
+                        .setZ(-2.4) //negative = forwards
+                        .setY(2); //negative = higher placement
                     builder.get("right_leg")
                         .setY(10);
                     builder.get("left_leg")
                         .setY(10);
                     builder.get("chest")
                         .setY(-0.8);
-                }
+                } 
+            
             }
         }
     });
