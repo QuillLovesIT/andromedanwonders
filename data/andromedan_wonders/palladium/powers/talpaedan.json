@@ -591,6 +591,100 @@
         ]
       }
     },
+    "dummy_punch":{
+     "type": "palladium:projectile",
+      "hidden": true,
+      "bar_color":"light_gray",
+      "title": "Sonic Punch",
+      "icon": "minecraft:arrow",
+      "entity_type":"palladium:custom_projectile",
+      "innacuracy": 0,
+      "velocity": 4,
+      "swinging_arm": "both",
+      "damage_from_player": false,
+      "list_index": 0,
+      "hidden_in_bar": false,
+      "entity_data": {
+        "Size": 30,
+        "Gravity": 0,
+        "Lifetime": 5,
+        "DieOnBlockHit": false,
+        "Appearances": [
+          {
+            "Type": "particles",
+            "ParticleType": "alienevo:sonic_boom",
+            "Spread": 5,
+            "Amount": 9
+          }
+        ]
+      },
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:activation",
+            "ticks": 1,
+            "cooldown": 100,
+            "needs_empty_hand": false,
+            "key_type": "right_click"
+          }
+        ], 
+        "unlocking":[
+          {
+            "type":"palladium:not",
+            "conditions":[
+              {
+                "type": "palladium:ability_enabled",
+                "power":"null",
+                "ability":"drill_mode"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "push": {
+      "type": "andromedan_wonders:mob_pusher_modified",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "range": 6,
+      "motion_scale": 10,
+      "vertical_boost": 0.25,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "power": "null",
+            "ability": "dummy_punch"
+          }
+        ]
+      }
+    },
+    "explosion_sound":{
+    "type": "palladium:play_sound",
+    "icon": "minecraft:blaze_rod",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "sound": "minecraft:entity.generic.explode",
+    "volume": 6,
+    "pitch": 1,
+    "looping": false,
+    "play_self": true,
+    "play_others": true,
+    "conditions":{
+      "enabling":[
+        {
+          "type":"palladium:ability_enabled",
+          "power":"null",
+          "ability":"dummy_punch"
+        }
+      ]
+    }
+},
     "show_both_arms_drill": {
       "type": "palladium:show_both_arms",
       "hidden": true,
