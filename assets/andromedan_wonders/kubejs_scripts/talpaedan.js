@@ -3,8 +3,8 @@ PalladiumEvents.registerAnimations((event) => {
         if (abilityUtil.isEnabled(builder.getPlayer(), "andromedan_wonders:talpaedan", "renderLayer")) {
             if (builder.isFirstPerson()) {
                 builder.get("right_arm")
-                    .setX(1)
-                    .setZ(-1)
+                    .setX(4)
+                    .setZ(4)
                     .scaleX(0.8)
                     .scaleY(0.8)
                     .scaleZ(0.8);

@@ -220,7 +220,8 @@
     "list_index": -1,
     "drop_block_tags": [
         "minecraft:mineable/pickaxe",
-        "minecraft:needs_diamond_tool"
+        "minecraft:needs_diamond_tool",
+        "minecraft:mineable/shovel"
     ],
     "conditions":{
         "enabling":[
@@ -397,6 +398,7 @@
     ]
   }
 },
+ 
 "block_wave": {
   "type": "alienevo:block_wave",
   "radius": 10,
