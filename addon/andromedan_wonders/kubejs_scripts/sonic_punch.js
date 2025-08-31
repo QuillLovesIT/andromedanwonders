@@ -1,4 +1,4 @@
-StartupEvents.registry("palladium:abilities", event => {
+StartupEvents.registry("palladium:abilities", event => { // CREDIT TO BEANS FOR THE SCRIPT, I ONLY TWEAKED A BIT
     event.create("andromedan_wonders:mob_pusher_modified")
         .icon(palladium.createItemIcon('minecraft:egg'))
         .documentationDescription('Pushes mobs in all directions, including up.')
