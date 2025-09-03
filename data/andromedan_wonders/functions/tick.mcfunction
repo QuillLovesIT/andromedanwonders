@@ -1,19 +1,11 @@
-# Start with 0
-scoreboard players set @a dig_meter 0
+# get current broken blocks into delta
+execute as @a store result score @s blocks_delta run scoreboard players get @s blocks_broken
 
-# Add all block objectives
-execute as @a run scoreboard players operation @s dig_meter += @s dig_stone
-execute as @a run scoreboard players operation @s dig_meter += @s dig_cobblestone
-execute as @a run scoreboard players operation @s dig_meter += @s dig_tuff
-execute as @a run scoreboard players operation @s dig_meter += @s dig_andesite
-execute as @a run scoreboard players operation @s dig_meter += @s dig_granite
-execute as @a run scoreboard players operation @s dig_meter += @s dig_diorite
-execute as @a run scoreboard players operation @s dig_meter += @s dig_deepslate
-execute as @a run scoreboard players operation @s dig_meter += @s dig_blackstone
-execute as @a run scoreboard players operation @s dig_meter += @s dig_cobbled_deepslate
-execute as @a run scoreboard players operation @s dig_meter += @s dig_basalt
-execute as @a run scoreboard players operation @s dig_meter += @s dig_netherrack
+# delta = current - old
+scoreboard players operation @a blocks_delta -= @a old_blocks_broken
 
-execute as @a if score @s dig_meter matches 1.. if score @s dig_reward matches 0..0 run function andromedan_wonders/mine_block
+# set old = current for next tick
+scoreboard players operation @a old_blocks_broken = @a blocks_broken
 
-execute as @a if score @s dig_meter matches 1.. if score @s dig_reward matches 0..0 run scoreboard players set @s dig_reward 1
+# add energy if blocks were mined this tick
+execute as @a if score @s blocks_delta matches 1.. run scoreboard players add @s dig_meter 2

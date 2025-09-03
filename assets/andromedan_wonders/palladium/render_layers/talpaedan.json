@@ -1,46 +1,10 @@
 {
-    "type": "palladium:compound",
+  "type": "palladium:compound",
   "layers": [
-  {
-    "type": "geckolib:default",
-    "model": {
-      "base": "andromedan_wonders:geo/aliens/alien_190/talpaedan.geo.json",
-      "variables": {
-        "UNIFORM": {
-          "type": "palladium:string_property",
-          "property": "uniform"
-        }
-      }
-    },
-    "animation_file": "andromedan_wonders:animations/talpaedan.animation.json",
-      "animation_controller": [
-        {
-          "name": "drill_mode",
-          "transition_tick_time": 0,
-          "triggers": {
-            "drill_off": "drill_mode_off",
-            "drill_on": "drill_mode_on"
-            
-          }
-        }
-      ],
-    "first_person_conditions": false,
-    "texture": {
-      "base": "andromedan_wonders:textures/models/aliens/alien_190/talpaedan.png",
-      "bones": {
-        "head": "armorHead",
-        "body": "armorBody",
-        "right_arm": "armorRightArm",
-        "left_arm": "armorLeftArm",
-        "right_leg": "armorRightLeg",
-        "left_leg": "armorLeftLeg"
-    } 
-  }
-      },
-      {
+    {
       "type": "geckolib:default",
       "model": {
-        "base": "andromedan_wonders:geo/aliens/alien_190/talpaedan_fp.geo.json",
+        "base": "andromedan_wonders:geo/aliens/alien_190/talpaedan_#UNIFORM.geo.json",
         "variables": {
           "UNIFORM": {
             "type": "palladium:string_property",
@@ -48,22 +12,517 @@
           }
         }
       },
-       "animation_file": "andromedan_wonders:animations/talpaedanfp.animation.json",
-      "animation_controller": [
-        {
-          "name": "drill_mode",
-          "transition_tick_time": 0,
-          "triggers": {
-            "drill_off": "drill_mode_off",
-            "drill_on": "drill_mode_on"
-            
+      "third_person_conditions": true,
+      "texture": {
+        "base": "andromedan_wonders:textures/models/aliens/alien_190/talpaedan_skin_#UNIFORM.png",
+        "bones": {
+        "head": "armorHead",
+        "body": "armorBody",
+        "right_arm": "armorRightArm",
+        "left_arm": "armorLeftArm",
+        "right_leg": "armorRightLeg",
+        "left_leg": "armorLeftLeg"
+        },
+        "transformers": [
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_1",
+            "filter": "#cdc322",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_2",
+            "filter": "#b5a821",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_3",
+            "filter": "#b5a01e",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_4",
+            "filter": "#b0a520",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_5",
+            "filter": "#aca230",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_6",
+            "filter": "#a59d1b",
+            "ignore_blank": true
+          },
+           {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_7",
+            "filter": "#a49420",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_8",
+            "filter": "#9b8a21",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_9",
+            "filter": "#948021",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_10",
+            "filter": "#9d811a",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_11",
+            "filter": "#90861a",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_12",
+            "filter": "#8d7a20",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_13",
+            "filter": "#88771d",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_14",
+            "filter": "#6c5f17",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_P2_1",
+            "filter": "#6e788c",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_P2_2",
+            "filter": "#6a737e",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_P2_3",
+            "filter": "#5e656f",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_P2_4",
+            "filter": "#555b63",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_P2_5",
+            "filter": "#474e5a",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_P2_6",
+            "filter": "#454b53",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_PROTO_P2_7",
+            "filter": "#3a4049",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_10K_1",
+            "filter": "#doc522",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_10K_2",
+            "filter": "#c7bd25",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_10K_3",
+            "filter": "#c3b921",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_10K_4",
+            "filter": "#a69422",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_10K_5",
+            "filter": "#a49420",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_10K_6",
+            "filter": "#948021",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_10K_7",
+            "filter": "#8d7a20",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_10K_P2_1",
+            "filter": "#6e788c",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_10K_P2_2",
+            "filter": "#6a737e",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_10K_P2_3",
+            "filter": "#5e656f",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_10K_P2_4",
+            "filter": "#555b63",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_10K_P2_5",
+            "filter": "#474e5a",
+            "ignore_blank": true
+          },
+           {
+            "type": "palladium:color",
+            "color": "##SKIN_10K_P2_6",
+            "filter": "#454b53",
+            "ignore_blank": true
+          },
+           {
+            "type": "palladium:color",
+            "color": "##SKIN_10K_P2_7",
+            "filter": "#3a4049",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_DEFAULT_1",
+            "filter": "#doc522",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_DEFAULT_2",
+            "filter": "#c7bd25",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_DEFAULT_3",
+            "filter": "#c3b921",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_DEFAULT_4",
+            "filter": "#a49420",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_DEFAULT_5",
+            "filter": "#1f2777",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_DEFAULT_6",
+            "filter": "#948021",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_DEFAULT_7",
+            "filter": "#8d7a20",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_DEFAULT_P2_1",
+            "filter": "#6e788c",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_DEFAULT_P2_2",
+            "filter": "#6a737e",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_DEFAULT_P2_3",
+            "filter": "#5e656f",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_DEFAULT_P2_4",
+            "filter": "#555b63",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_DEFAULT_P2_5",
+            "filter": "#474e5a",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_DEFAULT_P2_6",
+            "filter": "#454b53",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##SKIN_DEFAULT_P2_7",
+            "filter": "#3a4049",
+            "ignore_blank": true
+          }
+        ],
+        "variables": {
+          "UNIFORM": {
+            "type": "palladium:string_property",
+            "property": "uniform"
+          },
+          "SKIN_PROTO_1": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_1_color_1"
+          },
+          "SKIN_PROTO_2": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_1_color_2"
+          },
+          "SKIN_PROTO_3": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_1_color_3"
+          },
+          "SKIN_PROTO_4": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_1_color_4"
+          },
+          "SKIN_PROTO_5": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_1_color_5"
+          },
+          "SKIN_PROTO_6": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_1_color_6"
+          },
+          "SKIN_PROTO_7": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_1_color_7"
+          },
+          "SKIN_PROTO_8": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_1_color_8"
+          },
+          "SKIN_PROTO_9": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_1_color_9"
+          },
+          "SKIN_PROTO_10": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_1_color_10"
+          },
+          "SKIN_PROTO_11": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_1_color_11"
+          },
+          "SKIN_PROTO_12": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_1_color_12"
+          },
+          "SKIN_PROTO_13": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_1_color_13"
+          },
+          "SKIN_PROTO_14": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_1_color_14"
+          },
+          "SKIN_PROTO_P2_1": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_2_color_1"
+          },
+          "SKIN_PROTO_P2_2": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_2_color_2"
+          },
+          "SKIN_PROTO_P2_3": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_2_color_3"
+          },
+          "SKIN_PROTO_P2_4": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_2_color_4"
+          },
+          "SKIN_PROTO_P2_5": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_2_color_5"
+          },
+          "SKIN_PROTO_P2_6": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_2_color_6"
+          },
+          "SKIN_PROTO_P2_7": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_prototype_skincolor_palette_2_color_7"
+          },
+          "SKIN_10K_1": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_10k_skincolor_palette_1_color_1"
+          },
+          "SKIN_10K_2": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_10k_skincolor_palette_1_color_2"
+          },
+          "SKIN_10K_3": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_10k_skincolor_palette_1_color_3"
+          },
+          "SKIN_10K_4": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_10k_skincolor_palette_1_color_4"
+          },
+          "SKIN_10K_5": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_10k_skincolor_palette_1_color_5"
+          },
+          "SKIN_10K_6": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_10k_skincolor_palette_1_color_6"
+          },
+          "SKIN_10K_7": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_10k_skincolor_palette_1_color_7"
+          },
+          "SKIN_10K_P2_1": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_10k_skincolor_palette_2_color_1"
+          },
+          "SKIN_10K_P2_2": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_10k_skincolor_palette_2_color_2"
+          },
+          "SKIN_10K_P2_3": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_10k_skincolor_palette_2_color_3"
+          },
+          "SKIN_10K_P2_4": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_10k_skincolor_palette_2_color_4"
+          },
+          "SKIN_10K_P2_5": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_10k_skincolor_palette_2_color_5"
+          },
+          "SKIN_10K_P2_6": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_10k_skincolor_palette_2_color_6"
+          },
+          "SKIN_10K_P2_7": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_10k_skincolor_palette_2_color_7"
+          },
+          "SKIN_DEFAULT_1": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_default_skincolor_palette_1_color_1"
+          },
+          "SKIN_DEFAULT_2": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_default_skincolor_palette_1_color_2"
+          },
+          "SKIN_DEFAULT_3": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_default_skincolor_palette_1_color_3"
+          },
+          "SKIN_DEFAULT_4": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_default_skincolor_palette_1_color_4"
+          },
+          "SKIN_DEFAULT_5": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_default_skincolor_palette_1_color_5"
+          },
+          "SKIN_DEFAULT_6": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_default_skincolor_palette_1_color_6"
+          },
+          "SKIN_DEFAULT_7": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_default_skincolor_palette_1_color_7"
+          },
+          "SKIN_DEFAULT_P2_1": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_default_skincolor_palette_2_color_1"
+          },
+          "SKIN_DEFAULT_P2_2": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_default_skincolor_palette_2_color_2"
+          },
+          "SKIN_DEFAULT_P2_3": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_default_skincolor_palette_2_color_3"
+          },
+          "SKIN_DEFAULT_P2_4": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_default_skincolor_palette_2_color_4"
+          },
+          "SKIN_DEFAULT_P2_5": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_default_skincolor_palette_2_color_5"
+          },
+          "SKIN_DEFAULT_P2_6": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_default_skincolor_palette_2_color_6"
+          },
+          "SKIN_DEFAULT_P2_7": {
+            "type": "palladium:string_property",
+            "property": "talpaedan_default_skincolor_palette_2_color_7"
           }
         }
-      ],
-      "third_person_conditions": false,
-      "texture": {
-        "base": "andromedan_wonders:textures/models/aliens/alien_190/talpaedan.png"}
-      },
+      }
+    },
     {
       "type": "geckolib:default",
       "model": {
@@ -121,6 +580,7 @@
     },
     {
       "type": "geckolib:default",
+      "render_type": "glow",
       "model": {
         "base": "andromedan_wonders:geo/aliens/alien_190/badge_#BADGE.geo.json",
         "variables": {
@@ -130,77 +590,51 @@
           }
         }
       },
-      "render_type": "glow",
       "texture": {
+        "base": "alienevo:textures/models/badge/badge_glow_#WATCHSTATE_#BADGE.png",
+        "transformers": [
+          {
+            "type": "palladium:color",
+            "color": "##GLOW_1",
+            "filter": "#ffffff",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##GLOW_2",
+            "filter": "#eaeaea",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##GLOW_3",
+            "filter": "#cfcfdd",
+            "ignore_blank": true
+          }
+        ],
         "variables": {
+          "WATCHSTATE": {
+            "type": "palladium:string_property",
+            "property": "watch_state"
+          },
           "BADGE": {
             "type": "palladium:string_property",
             "property": "badge"
           },
-          "X": {
+          "GLOW_1": {
             "type": "palladium:string_property",
-            "property": "AlienEvo.Color"
+            "property": "uniform_glow_color_1"
+          },
+          "GLOW_2": {
+            "type": "palladium:string_property",
+            "property": "uniform_glow_color_2"
+          },
+          "GLOW_3": {
+            "type": "palladium:string_property",
+            "property": "uniform_glow_color_3"
           }
-        },
-        "base": "alienevo:textures/models/badge/badge_#X_#BADGE.png"
+        }
       }
-    },
-    {
-      "type": "geckolib:default",
-      "model": {
-        "base": "andromedan_wonders:geo/aliens/alien_190/badge_#BADGE.geo.json",
-        "variables": {
-          "BADGE": {
-            "type": "palladium:string_property",
-            "property": "badge"
-          }
-        }
-      },
-      "render_type": "glow",
-      "texture": {
-        "variables": {
-          "BADGE": {
-            "type": "palladium:string_property",
-            "property": "badge"
-          }
-        },
-        "base": "alienevo:textures/models/badge/badge_red_#BADGE.png"
-      },
-      "conditions": [
-        {
-          "type": "alienevo:has_timeout_bubble",
-          "value": true
-        },
-          {
-          "type": "palladium:or",
-          "conditions": [
-            {
-              "type": "palladium:objective_score",
-              "objective": "AlienEvo.Timer",
-              "min_score": 5940,
-              "max_score": 5950
-            },
-            {
-              "type": "palladium:objective_score",
-              "objective": "AlienEvo.Timer",
-              "min_score": 5960,
-              "max_score": 5970
-            },
-            {
-              "type": "palladium:objective_score",
-              "objective": "AlienEvo.Timer",
-              "min_score": 5960,
-              "max_score": 5970
-            },
-            {
-              "type": "palladium:objective_score",
-              "objective": "AlienEvo.Timer",
-              "min_score": 5980,
-              "max_score": 6000
-            }
-          ]
-        }
-      ]
     }
   ]
 }

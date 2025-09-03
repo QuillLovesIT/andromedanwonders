@@ -1,0 +1,206 @@
+{
+    "type": "palladium:compound",
+  "layers": [
+  {
+    "type": "geckolib:default",
+    "model": {
+      "base": "andromedan_wonders:geo/aliens/alien_190/talpaedan.geo.json",
+      "variables": {
+        "UNIFORM": {
+          "type": "palladium:string_property",
+          "property": "uniform"
+        }
+      }
+    },
+    "animation_file": "andromedan_wonders:animations/talpaedan.animation.json",
+      "animation_controller": [
+        {
+          "name": "drill_mode",
+          "transition_tick_time": 0,
+          "triggers": {
+            "drill_off": "drill_mode_off",
+            "drill_on": "drill_mode_on"
+            
+          }
+        }
+      ],
+    "first_person_conditions": false,
+    "texture": {
+      "base": "andromedan_wonders:textures/models/aliens/alien_190/talpaedan.png",
+      "bones": {
+        "head": "armorHead",
+        "body": "armorBody",
+        "right_arm": "armorRightArm",
+        "left_arm": "armorLeftArm",
+        "right_leg": "armorRightLeg",
+        "left_leg": "armorLeftLeg"
+    } 
+  }
+      },
+      {
+      "type": "geckolib:default",
+      "model": {
+        "base": "andromedan_wonders:geo/aliens/alien_190/talpaedan_fp.geo.json",
+        "variables": {
+          "UNIFORM": {
+            "type": "palladium:string_property",
+            "property": "uniform"
+          }
+        }
+      },
+       "animation_file": "andromedan_wonders:animations/talpaedanfp.animation.json",
+      "animation_controller": [
+        {
+          "name": "drill_mode",
+          "transition_tick_time": 0,
+          "triggers": {
+            "drill_off": "drill_mode_off",
+            "drill_on": "drill_mode_on"
+            
+          }
+        }
+      ],
+      "third_person_conditions": false,
+      "texture": {
+        "base": "andromedan_wonders:textures/models/aliens/alien_190/talpaedan.png"}
+      },
+    {
+      "type": "geckolib:default",
+      "model": {
+        "base": "andromedan_wonders:geo/aliens/alien_190/badge_#BADGE.geo.json",
+        "variables": {
+          "BADGE": {
+            "type": "palladium:string_property",
+            "property": "badge"
+          }
+        }
+      },
+      "texture": {
+        "base": "alienevo:textures/models/badge/badge_#BADGE.png",
+        "transformers": [
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/badge/#BADGE/core_side/core_side_#Z.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/badge/#BADGE/core_top/core_top_#Y.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/badge/#BADGE/dial_inner/dial_inner_#X.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/badge/#BADGE/dial_outer/dial_outer_#W.png"
+          }
+        ],
+        "variables": {
+          "BADGE": {
+            "type": "palladium:string_property",
+            "property": "badge"
+          },
+          "Z": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.CoreSide"
+          },
+          "Y": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.CoreTop"
+          },
+          "X": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.DialInner"
+          },
+          "W": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.DialOuter"
+          }
+        }
+      }
+    },
+    {
+      "type": "geckolib:default",
+      "model": {
+        "base": "andromedan_wonders:geo/aliens/alien_190/badge_#BADGE.geo.json",
+        "variables": {
+          "BADGE": {
+            "type": "palladium:string_property",
+            "property": "badge"
+          }
+        }
+      },
+      "render_type": "glow",
+      "texture": {
+        "variables": {
+          "BADGE": {
+            "type": "palladium:string_property",
+            "property": "badge"
+          },
+          "X": {
+            "type": "palladium:string_property",
+            "property": "AlienEvo.Color"
+          }
+        },
+        "base": "alienevo:textures/models/badge/badge_#X_#BADGE.png"
+      }
+    },
+    {
+      "type": "geckolib:default",
+      "model": {
+        "base": "andromedan_wonders:geo/aliens/alien_190/badge_#BADGE.geo.json",
+        "variables": {
+          "BADGE": {
+            "type": "palladium:string_property",
+            "property": "badge"
+          }
+        }
+      },
+      "render_type": "glow",
+      "texture": {
+        "variables": {
+          "BADGE": {
+            "type": "palladium:string_property",
+            "property": "badge"
+          }
+        },
+        "base": "alienevo:textures/models/badge/badge_red_#BADGE.png"
+      },
+      "conditions": [
+        {
+          "type": "alienevo:has_timeout_bubble",
+          "value": true
+        },
+          {
+          "type": "palladium:or",
+          "conditions": [
+            {
+              "type": "palladium:objective_score",
+              "objective": "AlienEvo.Timer",
+              "min_score": 5940,
+              "max_score": 5950
+            },
+            {
+              "type": "palladium:objective_score",
+              "objective": "AlienEvo.Timer",
+              "min_score": 5960,
+              "max_score": 5970
+            },
+            {
+              "type": "palladium:objective_score",
+              "objective": "AlienEvo.Timer",
+              "min_score": 5960,
+              "max_score": 5970
+            },
+            {
+              "type": "palladium:objective_score",
+              "objective": "AlienEvo.Timer",
+              "min_score": 5980,
+              "max_score": 6000
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
