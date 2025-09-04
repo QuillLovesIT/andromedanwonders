@@ -35,7 +35,7 @@
       "first_tick_commands": [
         "scale easing set palladium:ability pehkui:exponential_out",
         "scale set pehkui:drops 0.5 @s",
-        "scale set pehkui:hitbox_width 2.5 @s",
+        "scale set pehkui:hitbox_width 1.9 @s",
         "scale set pehkui:eye_height 1.1 @s",
         "scale set pehkui:hitbox_height 1 @s",
         "scale set pehkui:entity_reach 1 @s",
@@ -105,7 +105,7 @@
             "conditions": [
               {
                 "type": "alienevo:current_alien_nickname",
-                "value": "species.alienevo_aliens.300"
+                "value": "species.alienevo_aliens.190"
               },
               {
                 "type": "palladium:not",
