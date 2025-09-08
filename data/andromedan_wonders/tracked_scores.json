@@ -2,6 +2,7 @@
     "objectives": [
         "Talpaedan.XP",
         "Talpaedan.Level",
-        "Talpaedan.SkillPoint"
+        "Talpaedan.SkillPoint",
+        "dig_meter"
     ]
 }

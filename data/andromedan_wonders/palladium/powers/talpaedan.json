@@ -41,22 +41,13 @@
         "scale set pehkui:entity_reach 1 @s",
         "scoreboard objectives add Talpaedan.XP dummy",
         "scoreboard objectives add Talpaedan.Level dummy",
-        "scoreboard objectives add Talpaedan.SkillPoint dummy"
+        "scoreboard objectives add Talpaedan.SkillPoint dummy",
+        "scoreboard objectives add dig_meter dummy"
       ],
       "last_tick_commands": [
         "scale reset",
         "scale easing reset",
-        "scoreboard players set @s dig_stone 0",
-        "scoreboard players set @s dig_cobblestone 0",
-        "scoreboard players set @s dig_tuff 0",
-        "scoreboard players set @s dig_andesite 0",
-        "scoreboard players set @s dig_granite 0",
-        "scoreboard players set @s dig_diorite 0",
-        "scoreboard players set @s dig_deepslate 0",
-        "scoreboard players set @s dig_blackstone 0",
-        "scoreboard players set @s dig_cobbled_deepslate 0",
-        "scoreboard players set @s dig_basalt 0",
-        "scoreboard players set @s dig_netherrack 0"
+        "scoreboard objectives remove dig_meter dummy"
         
       ],
       "commands": [
