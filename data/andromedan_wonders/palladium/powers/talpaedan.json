@@ -679,24 +679,14 @@
         ]
       }
     },
-    "drain_all_from_bar":{
+    "drain_some_from_bar":{
       "type":"palladium:command",
       "icon":"minecraft:obsidian",
       "hidden": true,
       "hidden_in_bar": true,
       "list_index": -1,
       "commands":[
-        "scoreboard players set @s dig_stone 0",
-        "scoreboard players set @s dig_cobblestone 0",
-        "scoreboard players set @s dig_tuff 0",
-        "scoreboard players set @s dig_andesite 0",
-        "scoreboard players set @s dig_granite 0",
-        "scoreboard players set @s dig_diorite 0",
-        "scoreboard players set @s dig_deepslate 0",
-        "scoreboard players set @s dig_blackstone 0",
-        "scoreboard players set @s dig_cobbled_deepslate 0",
-        "scoreboard players set @s dig_basalt 0",
-        "scoreboard players set @s dig_netherrack 0"
+        "scoreboard players remove @s dig_meter 100"
       ],
       "conditions":{
         "enabling":[
@@ -770,24 +760,14 @@
         ]
       }
     },
-    "drain_some_from_bar":{
+    "drain_from_bar":{
       "type":"palladium:command",
       "icon":"minecraft:obsidian",
       "hidden": true,
       "hidden_in_bar": true,
       "list_index": -1,
       "commands":[
-        "scoreboard players set @s dig_stone 0",
-        "scoreboard players set @s dig_cobblestone 0",
-        "scoreboard players set @s dig_tuff 0",
-        "scoreboard players set @s dig_andesite 0",
-        "scoreboard players set @s dig_granite 0",
-        "scoreboard players set @s dig_diorite 0",
-        "scoreboard players set @s dig_deepslate 0",
-        "scoreboard players set @s dig_blackstone 0",
-        "scoreboard players set @s dig_cobbled_deepslate 0",
-        "scoreboard players set @s dig_basalt 0",
-        "scoreboard players set @s dig_netherrack 0"
+        "scoreboard players remove @s dig_meter 60"
       ],
       "conditions":{
         "enabling":[
